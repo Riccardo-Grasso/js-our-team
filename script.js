@@ -81,5 +81,6 @@ btnAdd.addEventListener("click", function () {
         'ruolo': newRoleMember,
         'img': newImgMember,
     });
+    console.log(`${newNameMember} - ${newRoleMember}`);
     stampaCard(team, teamContainer);
 });
