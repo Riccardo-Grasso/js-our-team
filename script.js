@@ -43,9 +43,6 @@ const btnAdd = document.getElementById("addMemberButton");
 console.log("Membri del team:");
 stampaCard(team, teamContainer);
 
-
-
-
 function stampaCard(array, container) {
     container.innerHTML = "";
     for (i = 0; i < array.length; i++) {
