@@ -47,6 +47,7 @@ stampaCard(team, teamContainer);
 
 
 function stampaCard(array, container) {
+    container.innerHTML = "";
     for (i = 0; i < array.length; i++) {
         container.innerHTML += `<div class="team-card">
         <div class="card-image">
@@ -66,10 +67,9 @@ function stampaCard(array, container) {
 }
 
 btnAdd.addEventListener("click", function () {
-    const addMember = document.getElementById("add-member");
-    const newName = addMember.getElementById("name");
-    const newRole = addMember.getElementById("role");
-    const newImg = addMember.getElementById("image");
+    const newName = document.getElementById("name");
+    const newRole = document.getElementById("role");
+    const newImg = document.getElementById("image");
 
 
     const newNameMember = newName.value;
@@ -77,8 +77,9 @@ btnAdd.addEventListener("click", function () {
     const newImgMember = newImg.value;
 
     team.push({
-        'nome': `${newNameMember}`,
-        'ruolo': `${newRoleMember}`,
-        'img': `${newImgMember}`,
+        'nome': newNameMember,
+        'ruolo': newRoleMember,
+        'img': newImgMember,
     });
+    stampaCard(team, teamContainer);
 });
