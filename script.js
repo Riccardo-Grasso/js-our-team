@@ -38,6 +38,8 @@ const team = [
 ];
 
 const teamContainer = document.querySelector(".team-container");
+const btnAdd = document.getElementById("addMemberButton");
+
 console.log("Membri del team:");
 stampaCard(team, teamContainer);
 
@@ -62,3 +64,21 @@ function stampaCard(array, container) {
         console.log(`${array[i].nome} - ${array[i].ruolo}`);
     }
 }
+
+btnAdd.addEventListener("click", function () {
+    const addMember = document.getElementById("add-member");
+    const newName = addMember.getElementById("name");
+    const newRole = addMember.getElementById("role");
+    const newImg = addMember.getElementById("image");
+
+
+    const newNameMember = newName.value;
+    const newRoleMember = newRole.value;
+    const newImgMember = newImg.value;
+
+    team.push({
+        'nome': `${newNameMember}`,
+        'ruolo': `${newRoleMember}`,
+        'img': `${newImgMember}`,
+    });
+});
