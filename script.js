@@ -1,9 +1,9 @@
 const team = [
-    /*     {
-            'nome': 'Wayne Barnett',
-            'ruolo': 'Founder & CEO',
-            'img': 'wayne-barnett-founder-ceo.jpg',
-        }, */
+    {
+        'nome': 'Wayne Barnett',
+        'ruolo': 'Founder & CEO',
+        'img': 'wayne-barnett-founder-ceo.jpg',
+    },
 
     {
         'nome': 'Angela Caroll',
@@ -38,6 +38,7 @@ const team = [
 ];
 
 const teamContainer = document.querySelector(".team-container");
+console.log("Membri del team:");
 stampaCard(team, teamContainer);
 
 
@@ -57,5 +58,7 @@ function stampaCard(array, container) {
           <p>${array[i].ruolo}</p>
         </div>
       </div>`;
+
+        console.log(`${array[i].nome} - ${array[i].ruolo}`);
     }
 }
